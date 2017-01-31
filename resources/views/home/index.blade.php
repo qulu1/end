@@ -331,14 +331,14 @@
 			</div>
 		</section>
 	</body>
-	<script src={{ url("../Js/jquery.js") }}></script>
-	<script src={{ url("../Js/jssor.slider-21.1.6.mini.js") }}></script>
-	<script src={{ url("../Js/jssor.slider.mini.js") }}></script>
-	<script src={{ url("../Js/jssor.slider-21.1.6.debug.js") }}></script>
-	<script src={{ url("../Js/bootstrap.js") }}></script>
+	<script src={{ url("../js/jquery.js") }}></script>
+	<script src={{ url("../js/jssor.slider-21.1.6.mini.js") }}></script>
+	<script src={{ url("../js/jssor.slider.mini.js") }}></script>
+	<script src={{ url("../js/jssor.slider-21.1.6.debug.js") }}></script>
+	<script src={{ url("../js/bootstrap.js") }}></script>
 	<script src={{ url("../fancy/jquery.fancybox.js") }}></script>
 	<script src={{ url("../js/owl.carousel.js") }}></script>
-	<script src={{ url("../Js/main.js") }}></script>
+	<script src={{ url("../js/main.js") }}></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
 		$(".fancybox").fancybox();
