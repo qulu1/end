@@ -168,8 +168,8 @@
 					<div id="owl-portfolio" class="owl-carousel module">
 					@foreach($portfolio as $key)
 						<div class="item">
-							<a class="fancybox" rel="group" href="../images/{{$key->photo}}">
-								<img src="../images/{{$key->photo}}" class="img-responsive">
+							<a class="fancybox" rel="group" href= {{ url("../images/" . $key->photo) }} >
+								<img src={{ url("../images/" . $key->photo) }} class="img-responsive">
 								<div class="port-absolute">
 									<h3>{{$key->title}}</h3>
 								</div>
@@ -339,7 +339,7 @@
 	<script src={{ url("../fancy/jquery.fancybox.js") }}></script>
 	<script src={{ url("../js/owl.carousel.js") }}></script>
 	<script src={{ url("../Js/main.js") }}></script>
-	<script type={{ url("text/javascript") }}>
+	<script type="text/javascript">
 	$(document).ready(function() {
 		$(".fancybox").fancybox();
 	});

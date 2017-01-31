@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Endorfin Admin Page</title>
+    <title>Murad Arif Admin Page</title>
 
     <!-- Bootstrap Core CSS -->
     <link href={{ url("/css/bootstrap.min.css") }} rel="stylesheet">
