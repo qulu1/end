@@ -28,6 +28,6 @@ class HomeeController extends Controller
         $creative = DB::table('services')->where('category_id','=',1)->get();
         $digital = DB::table('services')->where('category_id','=',2)->get();
         $marketing = DB::table('services')->where('category_id','=',3)->get();
-    	return view('home.index', compact('portfolio','staff','client','creative','digital','marketing'));
+    	return view('home.index1', compact('portfolio','staff','client','creative','digital','marketing'));
     }
 }

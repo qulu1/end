@@ -41,6 +41,33 @@
 body {
   overflow: hidden;
 }
+.up{
+	position: fixed;
+	background-color: #fff;
+	width: 40px;
+	height: 40px;
+	bottom: 4vh;
+	right: 2%;
+	border-radius: 2px;
+	border: 1px solid #ffd200;
+	z-index: 1000;
+	text-align: center;
+	opacity: 0.4;
+	display: none;
+}
+.up:hover{
+	opacity: 1;
+	transition: .2s linear;
+}
+.up i {
+	color: #ffd200;
+	margin-top: 12px;
+	-webkit-transform: rotate(90deg);
+	   -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	     -o-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
 #preloader {
   position: fixed;
   top: 0;
@@ -130,11 +157,8 @@ body {
 	color: #4e4e4f;
 	font-family: "Endorphin BN";
 	line-height:27px;
-	font-size: 13px;
+	font-size: 14px;
 	word-spacing: 1px;
-}
-.headericon{
-	/* text-align: center; */
 }
 .mainheader div:last-child{
 	margin-top: 4%;
@@ -151,10 +175,9 @@ body {
 .mainheader div:last-child ul li{
 	width: 60px;
 	display: inline-block;
-	/* margin-right:0px ; */
 }
 #services{
-	height: auto;
+	min-height: 100vh;
 	background: #fedb37;
 	overflow: hidden;
 }
@@ -185,9 +208,12 @@ body {
 	padding-top: 10px;
 }
 .fulltoggle{
-	width: 55px;
+	width: 210px;
 	margin: 0 auto;
 	cursor: pointer;
+}
+.fulltoggle>div{
+	margin: 0 auto;
 }
 .toggleCreate{
 	display: none;
@@ -206,15 +232,17 @@ body {
 	margin-top: 5px;	
 }
 .fulltoggle ul{
-
+	text-align: center;
 	padding-left:0;
 }
 .fulltoggle ul li{
+	width: 100%;
 	padding-top: 6px;
-	color: white;
+	color: #404041;
 	font-size: 16px;
 	font-family: "Endorphin N";
 	list-style-type: none;
+	word-wrap: break-word;
 }
 .mainservices div div:nth-child(3) div:first-child img{
 	width: 190px;
@@ -245,37 +273,37 @@ body {
 
 }
 #portfolio{
-	height: auto;
 	overflow: hidden;
-	
+	padding-bottom: 50px;
 }
 .mainportfolio{
 	margin-top: 6%; 	
-	position: relative
+	position: relative;
 }
 .portfolio-header{
 	text-align: center;
 	font-size: 70px;
 	font-family: "Endorphin BN";
 	color: #9f9fa0;
-	
 }
 .port-slider-main{
 	display: block;
 	position: relative;
+	padding-top: 25px;
 }
 #owl-portfolio{
 	margin: 0 auto;
-	padding-top: 25px;
 	position: relative;
-	width: 742px;
-	height: 400px;
+	width:73.06vw ;
+	height: 40.26vw;
+	border-radius: 3px;
 }
 #owl-portfolio .item{
 	position: relative; 	
-	width: 742px;
-	height: 400px;
+	width:73.06vw ;
+	height: 40.26vw;
 	overflow: hidden;
+	border-radius: 3px;
 }
 #owl-portfolio .item a img{
 	position: relative;
@@ -308,11 +336,9 @@ body {
   	width: 60px;
   	height: 60px;
   }
-
   .port-absolute{
 	cursor: -webkit-grab; 
 	text-align: center;
-	/* z-index: 999; */
 	opacity: 0;
 	top: 0;
 	left: 0;
@@ -326,175 +352,18 @@ body {
 	opacity: 0.9;
 	transition: 0.5s ;
 }
-.port-absolute h3{
-	margin: 180px auto;
+.port-absolute p{
+	max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	margin: 25% auto;
 	color: #9f9fa0; 
-	/* position: absolute; */
-	/* left:42%; */
-	/* margin-top:50px;  */
 	font-family: "Endorphin BN";
 	font-size: 35px;
+	/* word-wrap: break-word; */
 }
-/* .sliderContent-mine{
-	padding-top: 50px ;
-}
-.main-portfolio-images{
-	/* padding-top:60px;
-/* 	width: 100%;
-	height: auto;
-	padding-right: 18%;
-    padding-left: 18%;
-}
-
-.portimg {
-	height: 500px;
-	float: left;
-	width: 100%;
-	padding: 0;
-	position: relative;
-	transition: 0.5s linear;
-	overflow: hidden;
-
-}
-.portimg a{
-	color:#9f9fa0; 
-}
-.portimg  a img{
-	cursor: -webkit-grab;
-	width: 100%;
-	height: 100%;
-	position: relative;
-	transition: 0.25s linear;
-	overflow: hidden;
-}
-.port-absolute{
-	cursor: -webkit-grab;
-	/* text-align: center; */
-/* 	z-index: 999;
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	 height: 500px;
-	background-color:transparent;
-}
-.port-absolute:hover{
-	background-color: #fedb37;
-	opacity: 0.6;
-	transition: 0.5s ;
-}
-.port-absolute span{
-	position: absolute;
-	left: 5%;
-	top: 6%;
-	font-family: "Endorphin BN";
-	font-size: 35px;
-}
-.port-main-slider{
-	display: block;
-	position: relative;
-	margin: 0 auto; 
-	top: 0px;
-	left: 0px;
-	width: 1300px;
-	height: 600px;
-	overflow: hidden; 
-	visibility: hidden;
-}
-.port-slider-main-slides{
-	cursor: -webkit-grab;
-	position: relative;
-	top: 0px;
-	left: 0px;
-	width: 1300px;
-	height: 600px;
-	overflow: hidden;
-}
-
-.port-img-slides{
-	display: none;
-}
-.jssora22l{
-	display: block;
- 	position: absolute;    
- 	width: 70px;
- 	height: 70px;
- 	cursor: -webkit-grab;
-	opacity: 0.3;
- 	top:0px;
- 	left:8px;
-}
- .jssora22r {
- 	display: block;
- 	position: absolute;    
- 	width: 70px;
- 	height: 70px;
- 	cursor: -webkit-grab;
- 	opacity: 0.3;
- 	top:0px;
- 	right:8px;
- }  
- .jssora22l:hover{
- 	opacity: 1;
- }
- .jssora22r:hover{
- 	opacity: 1;
- } */
-/* mobil slider portfolio */
-.port-mobil-slider-mine{
-		display:none; 	
-		position: relative;
-		width: 1300px;
-		margin:15px auto;
-		height:364px; 
-		overflow: hidden;
-		visibility: hidden;
-		}
-.port-mobil-slider-loading{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-	.loading-1{
-	filter: alpha(opacity=70);
-	opacity: 0.7; 
-	position: absolute; 
-	display: block;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	}
-	.loading-2{
-	position:absolute;
-	display:block;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	}
-	.port-mobil-slides{
-	cursor: pointer;
-	position: relative; 
-	top: 0px; 
-	left: 0px; 
-	width: 1300px;
-	height: 100%;
-	overflow: hidden;
-	}
-	.port-mobil-sliders div{
-	display: none;
-
-	}
-	.port-mobil-slide-image{
-	width: 100%; 
-	height: 100%;
-	}
-	.port-mobil-slide-image img{
-		object-fit: cover;
-	width: 100%;
-	height: 100%}
 #staff{
+	min-height: 100vh;
 	height:auto;
 	background-color:#fedb37;
 	overflow: hidden;
@@ -504,6 +373,7 @@ body {
 }
 
 .staff-header{
+	z-index: 1000;
 	position: relative;
 	text-align: center;
 	font-family: "Endorphin BN";
@@ -511,26 +381,16 @@ body {
 	color: #9f8d3c;
 	padding-bottom: 35px;
 }
-.staff-content{
-	
-}
 .staffcon{
-	/* margin: 0;
-	padding: 0; */
 	width: 16%;
-	/* padding-bottom: 15px; */
 	display: inline-block;
 }
-/* .staffcon div{
-	width: 50%;
-	float: left;
-}
- */
  .img{
  	margin: 0 auto;
  	text-align: center;
  	width: 110px;
 	height: 110px;
+	cursor: pointer;
  }
  .img img{
 	border: 1px solid transparent;
@@ -539,9 +399,6 @@ body {
 	height: 100%;
 	object-fit: cover;
 }
-/* .staffcon div:last-child{
-	margin-top: 48px;
-} */
 .stafftext{
 	padding-bottom: 20px;
 	padding-top: 10px;
@@ -557,58 +414,13 @@ body {
 	font-family: "Endorphin N";
 	font-size: 15px;
 }
-/* mobil versiya */
+/* mobil  */
 .staff-slider-padding{
 	display:none;
 	padding-bottom: 10%;
-		
 }
-.staff-slider-mine{
-			position: relative;
-			width: 980px;
-			margin:0 auto;
-			height:500px; 
-			overflow: hidden;
-			visibility: hidden;
-		}
-		.staff-slider-loading{
-			position: absolute;
-			top: 0px;
-			left: 0px;
-		}
-		.loading-1{
-		filter: alpha (opacity=70);
-		opacity: 0.7; 
-		position: absolute; 
-		display: block;
-		top: 0px;
-		left: 0px;
-		width: 100%;
-		height: 100%;
-		}
-		.loading-2{
-			position:absolute;
-			display:block;
-			top:0px;
-			left:0px;
-			width:100%;
-			height:100%;
-		}
-		.staff-slides{
-			cursor: pointer;
-			position: relative; 
-			top: 0px; 
-			left: 0px; 
-			width: 980px;
-			height: 500px;
-			overflow: hidden;
-		}
 		.staff-slide-image{
-			text-align: center;
-			width: 100%; 
-			height: 400px;
 			padding: 9%;
-
 		}
 		.staff-slide-image img{
 			object-fit: cover;
@@ -620,12 +432,12 @@ body {
 			text-align: center;
 			font-family: "Endorphin BN";
 			color: #9f8d3c;
-			font-size: 40px;
+			font-size: 20px;
 			width: 100%;
 			display: block;
 		}
 #clients{
-	/* min-height: auto; */
+	min-height: 100vh;
 	overflow: hidden;
 }
 .mainclients{
@@ -657,87 +469,27 @@ body {
 	padding-left:3%;
 	padding-right:3%;
 }
-.clients-list ul li img{
+.clients-list ul  li a img{
 	width: 100%;
 	height: auto;
-
 }
-/* .clients-button{
-	font-family: "Endorphin BI";
-	color: #fedb37;
-	padding: 10px 7%;
-	border-color: #fedb37;
-	background:transparent;
-	border: 2px solid #fedb37;
-}
-.clients-button:hover{
-	transition: 0.5s;
-	background: #fedb37;
-	color: white;
-}
-.clients-button:focus{
-	outline: none !important;
-} */
  /* mobil versiya */
-.clients-slider-mine{
-		display:none; 	
-		position: relative;
-		width: 980px;
-		margin:15 auto;
-		height:350px; 
-		overflow: hidden;
-		visibility: hidden;
-		}
-.client-slider-loading{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-	.loading-1{
-	filter: alpha(opacity=70);
-	opacity: 0.7; 
-	position: absolute; 
-	display: block;
-	top: 0px;
-	left: 0px;
+#clients-slider-mine{
+		display:none !important; 	
+		padding-top: 22px;
+	}
+	#clients-slider-mine>.item{
+		padding: 10%;
+	}
+	#clients-slider-mine .item a img{
 	width: 100%;
-	height: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 8%;
 	}
-	.loading-2{
-	position:absolute;
-	display:block;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	}
-	.client-slides{
-	cursor: pointer;
-	position: relative; 
-	top: 0px; 
-	left: 0px; 
-	width: 980px;
-	height: 350px;
-	overflow: hidden;
-	}
-	.client-sliders div{
-	display: none;
-
-	}
-	.client-slide-image{
-	width: 100%; 
-	height: 100%;
-	padding: 5%;
-	}
-	.client-slide-image img{
-
-	width: 100%;
-	height: 100%;
-}
-
 #contact{
 	background-color: #fedb37;
-	height:auto;
+	min-height: 115vh;
 	overflow: hidden;
 }
 .maincontact{
@@ -758,12 +510,10 @@ body {
 .contactcontent{
 	padding-top: 30px;
 	width: 100%;
-	/* text-align: center; */
 }
 .contactcontent-a{
 	padding-top: 40px;
 	width: 100%;
-	/* text-align: center; */
 }
 .contactcontent-a a{
 	text-decoration: none;
@@ -772,7 +522,6 @@ body {
 	vertical-align:top;
 	display: inline-block;
 	width: 220px;
-	/* text-align: center; */
 	font-size:18px;
 	font-family: "Endorphin BN";
 	color: #404041;
@@ -785,7 +534,6 @@ body {
 	vertical-align:top;
 	display: inline-block;
 	width: 220px;
-	/* text-align: center; */
 	font-size:18px;
 	font-family: "Endorphin BN";
 	color: #404041;
@@ -826,28 +574,22 @@ body {
     border: none;
     font-family: "Endorphin BN";
   	 padding: 1px 8px;
-  	 margin-left:40%;
   	 margin-top: 20px;
 }
 .main-form{
 	padding-top: 48px;
-
 }
 form{
 	margin: 0 auto;
-	
+	text-align: center;
 	width: 67.432950191570%;
 }
-.input:focus{
+.input:focus, .button:focus{
 	 outline:none;
 }
 .textarea:focus{
 	outline: 0;
 }
-.button:focus{
-	outline:none;
-}
-
 /* js animation elavesi */
 	.come-in {
 	transform: translateY(250px);
@@ -880,17 +622,23 @@ to { transform: translateY(0); }
 
 }
 @media only screen and (max-width: 800px) {
+	.port-absolute:hover{
+		opacity: 0;
+	}
 	form{
 		width: 93%;
 	}
-	.button{
-		margin-left: 37%;
-	}
-	 .staffcon, .clients-list,.port-slider-main{
+	 .staffcon, .clients-list{
 		display: none;
 	}
-	 .staff-slider-padding, .clients-slider-mine, .port-mobil-slider-mine{
-		display: block;
+	.prev, .next{
+		display: none;
+	}
+	#clients, #staff{
+		min-height: auto;
+	}
+	 .staff-slider-padding, #clients-slider-mine{
+		display: block !important;
 
 	}
 	.portfolio-header, .staff-header, .mainclients div div:first-child, .contactheader, .mainservices div div:first-child span{
@@ -934,6 +682,7 @@ to { transform: translateY(0); }
 	}
 	.navbar-nav {
    		 margin: 0;
+   		 background-color: white;
 	}
 	.navmenuen{
 		background-color: #fff;
@@ -951,49 +700,64 @@ to { transform: translateY(0); }
 		line-height:18px;
 		font-size: 12px;
 		margin-top: 5%;
-		/* word-spacing: 1px; */
 	}
 	.mainheader div:last-child{
 		padding-top: 5%;
 	}
 .navbar-toggle {
 	    margin-top:4% !important;
-
+	}
+	#portfolio{
+		height:115vw;
+	}
+	#owl-portfolio, #owl-portfolio .item {
+    width: 99.06vw ;
+    height: 65.26vw;
+	}
+	
+}
+@media all and (max-width:406px){
+	.contact-left{
+		width: 270px;
 	}
 }
-
 @media all and (max-width: 800px) and (min-width: 550px){
-	.client-slide-image img{
-		width: 65%;
+	#portfolio{
+		height:100vw;
+	}
+	#owl-portfolio, #owl-portfolio .item {
+    width: 99.06vw ;
+    height: 55.26vw;
+	}
+	#clients-slider-mine .item a  img{
+		width: 80%;
 		height: 65%;
 		padding: 0 !important;
 	}
 
-	.clients-slider-mine ,.client-slides{
-		height: 275px ;
-		/* width: 100px !important;  */
+	#clients-slider-mine {
+		height: 220px ;
 	}
-	.staff-slider-mine , .staff-slides{
+	#staff-slider-mine{
 		padding: 0;
-		 height: 425px;
+		 height: 285px;
 	} 
-	.mainclients, .staff-slider-padding{
+	.mainclients{
 		padding: 0;
 	}
 	.staff-slide-image{
-		height: 230px;
-		width: 230px;
-		margin: 0 auto;
-		padding: 0 !important;
-
+	height: 100%;
+    width: 100%;
+    padding: 12px !important;
 	}
 	.staff-slide-image img{
 		width: 100%;
 		height: 100%;
 	}
 	.staff-slide-text{
-		font-size: 30px;
+		font-size: 150%;
 	}
+	
 }
 @media only screen and (min-width:768px) and (max-width:800px){
 .navbar-collapse.collapse {
@@ -1008,14 +772,14 @@ to { transform: translateY(0); }
 }
 .navbar-toggle {
 	display:block !important;
-	   margin-top: 14% !important;
+	margin-top: 14% !important;
     left: 364%;
 	}
-}
-@media all and (max-width:406px){
-	.contact-left{
-		width: 270px;
+	#portfolio{
+		height:105vw;
+	}
+	#owl-portfolio, #owl-portfolio .item {
+    width: 95.06vw ;
+    height: 50vw;
 	}
 }
-
- 

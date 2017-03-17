@@ -34,6 +34,10 @@
 		<label for="photo">Photo:</label>
 		<input type="file" class="form-control" name="photo" value="{{$client->photo}}">
 	</div>	  
+    <div class="form-group">
+        <label for="link">Link:</label>
+        <input type="text" class="form-control" name="link" value="{{$client->link}}">
+    </div>        
 	<button type="submit" class="btn btn-success">Submit</button>
 </form> 
 

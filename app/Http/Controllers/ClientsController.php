@@ -30,6 +30,7 @@ class ClientsController extends Controller
             $name = time().".".$request->file("photo")->extension();
             $request->file("photo")->move(public_path().'/images',$name);  
         };
+        $client->link = $request->link;
         $client->photo = $name;
         $client->save();
     	return back();
@@ -52,6 +53,7 @@ class ClientsController extends Controller
             $request->file("photo")->move(public_path().'/images',$name);  
             $client->photo = $name;
         };
+        $client->link = $request->link;
         $client->update();
         return redirect('/clients');
     }

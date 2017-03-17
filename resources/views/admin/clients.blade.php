@@ -3,11 +3,13 @@
 @section('content')
 	<tr>
 		<th>Photo</th> 
+		<th>Link</th> 
 		<th class="text-center">Action</th> 
 	</tr>
 	@foreach($client as $key)
 	<tr>
 		<td><img style="width: 100px;height: 100px;" src="images/{{ $key->photo }}"></td> 
+		<td>{{ $key->link }}</td> 
 		<td><a href= {{ url( 'clients/' . $key->id . '/edit' ) }} class="btn btn-success"> Edit </a></td>
 		<td><a href= {{ url( 'clients/' . $key->id . '/delete' ) }} class="btn btn-danger">Delete</a></td>
 	</tr>
@@ -21,7 +23,11 @@
 	  <div class="form-group">
 	    <label for="photo">Photo:</label>
 	    <input type="file" class="form-control" name="photo">
-	  </div>	  
+	  </div>	
+	  <div class="form-group">
+	    <label for="link">Link:</label>
+	    <input type="text" class="form-control" name="link" value="#">
+	  </div>		    
 	  <button type="submit" class="btn btn-success">Submit</button>
 	</form>  
 @endsection

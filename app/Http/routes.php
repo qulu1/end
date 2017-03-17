@@ -60,3 +60,5 @@ Route::get('/services/{id}/delete', 'ServiceController@destroy');
 Route::get('messages', 'MessageController@index'); 
 Route::post('messages/contact', 'MessageController@store'); 
 Route::get('{id}/delete','MessageController@destroy'); 
+Route::post('/email', "MessageController@mail");
+

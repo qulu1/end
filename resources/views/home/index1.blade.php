@@ -2,15 +2,22 @@
 <html>
 	<head>
 		<title>Endorphin</title>
+		<meta charset="UTF-8">
+		<meta property="og:url" content="http://endorphin.az/" />
+		<meta property="og:type" content="profile" />
+		<meta property="og:title" content="Endorphin Website" />
+		<meta property="og:description" content="Welcome to Endorphin Website" />
+		<meta property="og:image" content={{ url("/images/LOGO.png") }} />
+		<meta name="keywords" content="Endorphin EndorphinBaku Digital AGENCY" />
+		<meta name="description" content="Endorphin Website" />			
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="jQuery Responsive Carousel - Owl Carusel">
-		<meta name="author" content="Bartosz Wojciechowski">
-		<link rel="stylesheet" href={{ url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css") }}>
-		<link rel="stylesheet" type="text/css" href={{ url("../css/bootstrap.css") }}>
-		<link rel="stylesheet" type="text/css" href={{ url("../fancy/jquery.fancybox.css") }}>
-		<link href={{ url("../css/owl.carousel.css") }} rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href={{ url("../css/style.css") }}>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../fancy/jquery.fancybox.css">
+		<link href="../css/owl.carousel.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/animate.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
 	</head>
 	<body>
 		<div id="preloader">
@@ -30,12 +37,12 @@
 				</div>
 				<div class = "collapse navbar-collapse uldiv"  id = "example-navbar-collapse">
 					<ul class = "nav navbar-nav navul">
-						<li class="navli scroll" data-section='header' ><span class="s header">ABOUT</span></li>
-						<li class="navli scroll" data-section='services' ><span class="s services">SERVICES</span></li>
-						<li class="navli scroll" data-section='portfolio' ><span class="s portfolio">PORTFOLIO</span></li>
-						<li class="navli scroll" data-section='staff' ><span class="s staff">STAFF</span></li>
-						<li class="navli scroll" data-section='clients' ><span class="s clients">CLIENTS</span></li>
-						<li class="navli scroll" data-section='contact' ><span class="s contact">CONTACT</span></li>
+						<li class="navli scroll swing_nav" data-section='header' ><span class="s header">ABOUT</span></li>
+						<li class="navli scroll swing_nav" data-section='services' ><span class="s services">SERVICES</span></li>
+						<li class="navli scroll swing_nav" data-section='portfolio' ><span class="s portfolio">PORTFOLIO</span></li>
+						<li class="navli scroll swing_nav" data-section='staff' ><span class="s staff">STAFF</span></li>
+						<li class="navli scroll swing_nav" data-section='clients' ><span class="s clients">CLIENTS</span></li>
+						<li class="navli scroll swing_nav" data-section='contact' ><span class="s contact">CONTACT</span></li>
 					</ul>
 				</div>
 			</div>
@@ -44,10 +51,10 @@
 			<div class="container mainheader module">
 				<div class="row">
 					<div class="header-a">
-						<span class=" module">WE ARE A CREATIVE, DIGITAL & <br> MARKETING AGENCY BASED IN<br> BAKU, AZERBAIJAN</span>
+						<span class="module" >WE ARE A CREATIVE, DIGITAL & <br> MARKETING AGENCY BASED IN<br> BAKU, AZERBAIJAN</span>
 					</div>
 					<div class="header-b">
-						<span class="module ">AS THE SOCIAL MEDIA NETWORKS GROW WHERE EVERYONE IS CONNECTED TO ONE ANOTHER,<br>MARKETING BECOMES HIGLY DIFFERENTIIATED IN THE DIGITAL AGE.ENDORPHIN IS THE MARKETING<br>EXPERT OF SOCIAL NETWORKS AND IS IN CHARGE OF ALL THE DETALIS.USING CONTEMPORARY<br>TECHNOLOGIY AND DIGITAL TOOLS; ENDORPHIN SHAPES YOUR MARKETING STRATEGY,GETS YOU<br>RESULTS AND HELPS YOUR REACH YOUR MARKETING GOALS</span>
+						<span class="module ">As the Social Media Networks, where everyone is connected with each other grow, marketing <br> becomes highly differentiated in the Digital Age. Endorphin is the expert of marketing on <br> Social Networks and  is in charge of the details.<br> Using  contemporary  technology and digital tools, Endorphin shapes your marketing strategy, <br>brings you exact results, and helps you reaching your marketing goals.</span>
 					</div>
 					<div class="headericon">
 						<ul>
@@ -66,11 +73,11 @@
 			<div class="container mainservices">
 				<div class="row">
 					<div class="module">
-						<span>SERVICES</span>
+						<span class="heade_text">SERVICES</span>
 					</div>
 					<div class="col-md-4 servipadd">
-						<div class="module">
-							<img src="../images/creative icon.png" alt="">
+						<div class="module ">
+							<img src="../images/creative icon.png" alt="" class="service_icons">
 						</div>
 						<div class="module">
 							<span>Creative</span>
@@ -79,9 +86,9 @@
 							<div class="clicktogle1 fulltoggle">
 								<div></div>
 								<ul class="toggleCreate">
-								@foreach($creative as $key)
-									<li>{{ $key->text }}</li>
-								@endforeach								
+									@foreach($creative as $key)
+										<li>{{ $key->text }}</li>
+									@endforeach		
 								</ul>
 								<div></div>
 							</div>
@@ -89,7 +96,7 @@
 					</div>
 					<div class="col-md-4 servipadd">
 						<div class="module">
-							<img src="../images/digital icon.png" alt="">
+							<img src="../images/digital icon.png" alt="" class="service_icons">
 						</div>
 						<div class="module">
 							<span>Digital</span>
@@ -98,9 +105,9 @@
 							<div class="clicktogle2 fulltoggle">
 								<div></div>
 								<ul class="toggleDig">
-								@foreach($digital as $key)
-									<li>{{ $key->text}}</li>
-								@endforeach	
+									@foreach($digital as $key)
+										<li>{{ $key->text}}</li>
+									@endforeach	
 								</ul>
 								<div></div>
 							</div>
@@ -108,7 +115,7 @@
 					</div>
 					<div class="col-md-4 servipadd">
 						<div class="module">
-							<img src="../images/marketing icon.png" alt="">
+							<img src="../images/marketing icon.png" alt="" class="service_icons">
 						</div>
 						<div class="module">
 							<span>Marketing</span>
@@ -117,9 +124,9 @@
 							<div class="clicktogle3 fulltoggle">
 								<div></div>
 								<ul class="toggleMark">
-								@foreach($marketing as $key)
-									<li>{{ $key->text}}</li>
-								@endforeach	
+									@foreach($marketing as $key)
+										<li>{{ $key->text}}</li>
+									@endforeach	
 								</ul>
 								<div></div>
 							</div>
@@ -134,67 +141,21 @@
 				<div class="module portfolio-header">
 					<span>PORTFOLIO</span>
 				</div>
-				<!-- <div id="jssor_2" class="port-main-slider module ">
-						<div data-u="slides" class="port-slider-main-slides">
-								<div data-p="225.00" class="sliderContent-mine " style="display: none;">
-										<div class="  main-portfolio-images">
-												<div class="row">
-														<div class=" portimg module" >
-																<a class="fancybox" rel="group" href="../images/port (1).jpg"></a>
-														</div>
-												</div>
-										</div>
-								</div>
-								<div data-p="225.00" style="display: none;" class="sliderContent-mine">
-										<div class="  main-portfolio-images">
-												<div class="row">
-														<div class=" portimg module" >
-																<a class="fancybox" rel="group" href="../images/port (2).jpg">
-																		<img src="../images/port (2).jpg" alt="" class="image-port">
-																</a>
-														</div>
-												</div>
-										</div>
-								</div>
-						</div>
-						<span data-u="arrowleft" class="jssora22l" data-autocenter="2">
-								<img src="../images/right.png" style="width: 100%;">
-						</span>
-						<span data-u="arrowright" class="jssora22r" data-autocenter="2">
-								<img src="../images/next.png" style="width: 100%;">
-						</span>
-				</div> -->
 				<div class="port-slider-main" >
 					<div id="owl-portfolio" class="owl-carousel module">
-					@foreach($portfolio as $key)
-						<div class="item">
-							<a class="fancybox" rel="group" href= {{ url("../images/" . $key->photo) }} >
-								<img src={{ url("../images/" . $key->photo) }} class="img-responsive">
-								<div class="port-absolute">
-									<h3>{{$key->title}}</h3>
-								</div>
-							</a>
-						</div>
-					@endforeach
+						@foreach($portfolio as $key)
+							<div class="item">
+								<a class="fancybox" rel="group" href= {{ url("../images/" . $key->photo) }} >
+									<img src={{ url("../images/" . $key->photo) }} class="img-responsive">
+									<div class="port-absolute">
+										<h3>{{$key->title}}</h3>
+									</div>
+								</a>
+							</div>
+						@endforeach									
 					</div>
 					<div class="prev module"><img src={{ url("../images/prev-port.png" ) }} alt=""></div>
 					<div class="next module"><img src={{ url("../images/next-port.png") }} alt=""></div>
-				</div>
-				
-				<div id="jssor_5" class="port-mobil-slider-mine" >
-					<div data-u="loading" class="port-mobil-slider-loading">
-						<div class="loading-1"></div>
-						<div class="loading-2"></div>
-					</div>
-					<div data-u="slides" class="port-mobil-slides module">
-						@foreach($portfolio as $key)
-							<div>
-								<div class="port-mobil-slide-image">
-									<img src="../images/{{$key->photo}}" alt="">
-								</div>
-							</div>
-						@endforeach
-					</div>
 				</div>
 			</div>
 		</section>
@@ -203,7 +164,7 @@
 			<div class="container mainstaff">
 				<div class="row">
 					<div class="module staff-header">
-						<span>STAFF</span>
+						<span class="heade_text">STAFF</span>
 					</div>
 					<div class="clearfix"></div>
 					<div class="staff-content">
@@ -221,23 +182,17 @@
 					</div>
 				</div>
 				<div class="staff-slider-padding">
-					<div id="jssor_3" class="staff-slider-mine"  >
-						<div data-u="loading" class="staff-slider-loading">
-							<div class="loading-1"></div>
-							<div class="loading-2"></div>
-						</div>
-						<div data-u="slides" class="staff-slides module">
-							@foreach($staff as $key)
-								<div>
-									<div class="staff-slide-image">
-										<img src="../images/{{$key->photo}}" alt="">
-									</div>
-									<div class="staff-slide-text">
-										<p>{{$key->name.' '.$key->surname}}</p>
-									</div>
+					<div id="staff-slider-mine" class="owl-carousel module">
+						@foreach($staff as $key)
+							<div>
+								<div class="staff-slide-image">
+									<img src="../images/{{$key->photo}}" alt="">
 								</div>
-							@endforeach
-						</div>
+								<div class="staff-slide-text">
+									<p>{{$key->name.' '.$key->surname}}</p>
+								</div>
+							</div>
+						@endforeach
 					</div>
 				</div>
 			</div>
@@ -259,26 +214,15 @@
 						</ul>
 						<div class="clearfix">
 						</div>
-						<!-- <div style="width: 100%;">
-														<button type="button" class="clients-button btn center-block">See More</button>
-						</div> -->
 					</div>
 					<div>
 					</div>
-					<div id="jssor_1" class="clients-slider-mine"  >
-						<div data-u="loading" class="client-slider-loading">
-							<div class="loading-1"></div>
-							<div class="loading-2"></div>
-						</div>
-						<div data-u="slides" class="client-slides module">
+					<div id="clients-slider-mine" class="owl-carousel module">
 						@foreach($client as $key)
-							<div>
-								<div class="client-slide-image">
-									<img src="../images/{{$key->photo}}" alt="">
+								<div class="item">
+									<a href="{{ $key->link }}"><img src="../images/{{$key->photo}}" alt=""></a>
 								</div>
-							</div>
-						@endforeach
-						</div>
+						@endforeach					
 					</div>
 				</div>
 			</div>
@@ -288,7 +232,7 @@
 			<div class="container maincontact ">
 				<div class="row">
 					<div class="contactheader module">
-						<span>
+						<span class="heade_text">
 							CONTACT
 						</span>
 					</div>
@@ -318,31 +262,26 @@
 					
 					<div class="col-md-7">
 						<div class="main-form">
-							<form action={{ url("messages/contact") }} method="POST" accept-charset="utf-8">
-							{{ csrf_field() }}
-								<input type="email" name="email" placeholder="Email" class="input module">
-								<input type="Text" name="subject" placeholder="Subject" class="input module">
-								<textarea name="message" class="textarea module" placeholder="Message"></textarea>
+							<form action={{ url("/email") }} method="post" accept-charset="utf-8">
+								{!! csrf_field() !!}
+								<input type="email" name="email" placeholder="Email" class="input module flip_flap">
+								<input type="Text" name="subject" placeholder="Subject" class="input module flip_flap">
+								<textarea name="message" class="textarea module flip_flap" placeholder="Message"></textarea>
 								<button type="submit" class="button module">Send</button>
-							</form>							
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<div class="up">
+			<i class="fa fa-chevron-left" aria-hidden="true"></i>
+		</div>
 	</body>
-	<script src={{ url("../js/jquery.js") }}></script>
-	<script src={{ url("../js/jssor.slider-21.1.6.mini.js") }}></script>
-	<script src={{ url("../js/jssor.slider.mini.js") }}></script>
-	<script src={{ url("../js/jssor.slider-21.1.6.debug.js") }}></script>
-	<script src={{ url("../js/bootstrap.js") }}></script>
+	<script src ={{ url("../js/jquery.js") }}></script>
+	<script src ={{ url("../js/bootstrap.js") }}></script>
 	<script src={{ url("../fancy/jquery.fancybox.js") }}></script>
 	<script src={{ url("../js/owl.carousel.js") }}></script>
+	<script src={{ url("../js/jquery.nicescroll.js") }}></script>
 	<script src={{ url("../js/main.js") }}></script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
-	</script>
-	
 </html>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Message;
+use Mail;
 
 
 class MessageController extends Controller
@@ -16,7 +17,17 @@ class MessageController extends Controller
     //     return $this->middleware('auth');
 
     // }
-        
+    public function mail(Request $request){
+        $data = ['email' => $request->email, 'subject' => $request->subject, 'bodymessage' => $request->message];
+
+        Mail::send('emails.email', $data, function($message) use($data)
+        {
+            $message->to('info@endorphin.az')
+            ->subject('Subject is : ' . $data['subject']);
+        });
+        return redirect('/');
+    }
+            
     public function index(){
 
     	$message = Message::all();
