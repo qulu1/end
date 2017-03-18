@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-93954581-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>	
 		<title>Endorphin</title>
 		<meta charset="UTF-8">
 		<meta property="og:url" content="http://endorphin.az/" />
@@ -11,7 +21,6 @@
 		<meta name="keywords" content="Endorphin EndorphinBaku Digital AGENCY" />
 		<meta name="description" content="Endorphin Website" />			
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="../fancy/jquery.fancybox.css">
@@ -148,7 +157,7 @@
 								<a class="fancybox" rel="group" href= {{ url("../images/" . $key->photo) }} >
 									<img src={{ url("../images/" . $key->photo) }} class="img-responsive">
 									<div class="port-absolute">
-										<h3>{{$key->title}}</h3>
+										<p>{{$key->title}}</p>
 									</div>
 								</a>
 							</div>
@@ -247,7 +256,7 @@
 							<div class="module">
 								<div class="contactcontent-a">
 									<a href={{ url("https://www.google.com/maps/place/Endorphin/@40.385134,49.8258933,17z/data=!4m5!3m4!1s0x0:0xb1b4ae08a0541630!8m2!3d40.385134!4d49.828082?hl=ru-RU") }} title=""><img src="../images/location.png" class="location"></a>
-									<a class="map-link" href={{ url("https://www.google.com/maps/place/Endorphin/@40.385134,49.8258933,17z/data=!4m5!3m4!1s0x0:0xb1b4ae08a0541630!8m2!3d40.385134!4d49.828082?hl=ru-RU") }} title=""><p >Globus Center floor 11 <br>Ofis N 11.05</p></a>
+									<a class="map-link" href={{ url("https://www.google.com/maps/place/Endorphin/@40.385134,49.8258933,17z/data=!4m5!3m4!1s0x0:0xb1b4ae08a0541630!8m2!3d40.385134!4d49.828082?hl=ru-RU") }} title=""><p >Globus Center floor 11</p></a>
 								</div>
 							</div>
 							<div class="module">
