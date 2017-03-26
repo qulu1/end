@@ -10,16 +10,16 @@
 		  ga('create', 'UA-93954581-1', 'auto');
 		  ga('send', 'pageview');
 
-		</script>	
+		</script>
 		<title>Endorphin</title>
 		<meta charset="UTF-8">
 		<meta property="og:url" content="http://endorphin.az/" />
 		<meta property="og:type" content="profile" />
 		<meta property="og:title" content="Endorphin Website" />
 		<meta property="og:description" content="Welcome to Endorphin Website" />
-		<meta property="og:image" content={{ url("/images/LOGO.png") }} />
+		<meta property="og:image" content={{ url("/images/endLogo.png") }} />
 		<meta name="keywords" content="Endorphin EndorphinBaku Digital AGENCY" />
-		<meta name="description" content="Endorphin Website" />			
+		<meta name="description" content="Endorphin Website" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
@@ -97,7 +97,7 @@
 								<ul class="toggleCreate">
 									@foreach($creative as $key)
 										<li>{{ $key->text }}</li>
-									@endforeach		
+									@endforeach
 								</ul>
 								<div></div>
 							</div>
@@ -116,7 +116,7 @@
 								<ul class="toggleDig">
 									@foreach($digital as $key)
 										<li>{{ $key->text}}</li>
-									@endforeach	
+									@endforeach
 								</ul>
 								<div></div>
 							</div>
@@ -135,7 +135,7 @@
 								<ul class="toggleMark">
 									@foreach($marketing as $key)
 										<li>{{ $key->text}}</li>
-									@endforeach	
+									@endforeach
 								</ul>
 								<div></div>
 							</div>
@@ -161,7 +161,7 @@
 									</div>
 								</a>
 							</div>
-						@endforeach									
+						@endforeach
 					</div>
 					<div class="prev module"><img src={{ url("../images/prev-port.png" ) }} alt=""></div>
 					<div class="next module"><img src={{ url("../images/next-port.png") }} alt=""></div>
@@ -187,7 +187,7 @@
 									<span>{{$key->position}}</span>
 								</div>
 							</div>
-						@endforeach							
+						@endforeach
 					</div>
 				</div>
 				<div class="staff-slider-padding">
@@ -219,7 +219,7 @@
 						<ul>
 							@foreach($client as $key)
 								<li class="module"><a href="{{ $key->link }}" target="_blank"><img src="../images/{{$key->photo}}"></li>
-							@endforeach							
+							@endforeach
 						</ul>
 						<div class="clearfix">
 						</div>
@@ -231,7 +231,7 @@
 								<div class="item">
 									<a href="{{ $key->link }}"><img src="../images/{{$key->photo}}" alt=""></a>
 								</div>
-						@endforeach					
+						@endforeach
 					</div>
 				</div>
 			</div>
@@ -266,9 +266,9 @@
 								</div>
 							</div>
 						</div>
-						
+
 					</div>
-					
+
 					<div class="col-md-7">
 						<div class="main-form">
 							<form action={{ url("/email") }} method="post" accept-charset="utf-8">
